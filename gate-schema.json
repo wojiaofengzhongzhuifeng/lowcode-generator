@@ -1,0 +1,416 @@
+{
+  "version": "1.0.0",
+  "componentsMap": [
+    {
+      "package": "@alifd/layout",
+      "version": "2.0.7",
+      "exportName": "Cell",
+      "main": "lib/index.js",
+      "destructuring": true,
+      "subName": "",
+      "componentName": "FDCell"
+    },
+    {
+      "package": "@alifd/layout",
+      "version": "2.0.7",
+      "exportName": "Block",
+      "main": "lib/index.js",
+      "destructuring": true,
+      "subName": "",
+      "componentName": "FDBlock"
+    },
+    {
+      "package": "@alifd/layout",
+      "version": "2.0.7",
+      "exportName": "Section",
+      "main": "lib/index.js",
+      "destructuring": true,
+      "subName": "",
+      "componentName": "FDSection"
+    },
+    {
+      "package": "@alifd/layout",
+      "version": "2.0.7",
+      "exportName": "Page",
+      "main": "lib/index.js",
+      "destructuring": true,
+      "componentName": "FDPage"
+    },
+    {
+      "devMode": "lowCode",
+      "componentName": "Page"
+    },
+    {
+      "package": "gate-lowcode-component",
+      "version": "0.2.4",
+      "exportName": "ChartCard",
+      "main": "src/index.tsx",
+      "destructuring": true,
+      "subName": "",
+      "componentName": "ChartCard"
+    },
+    {
+      "package": "gate-lowcode-component",
+      "version": "0.2.4",
+      "exportName": "FAQS",
+      "main": "src/index.tsx",
+      "destructuring": true,
+      "subName": "",
+      "componentName": "FAQS"
+    },
+    {
+      "package": "gate-lowcode-component",
+      "version": "0.2.4",
+      "exportName": "LearnArticleList",
+      "main": "src/index.tsx",
+      "destructuring": true,
+      "subName": "",
+      "componentName": "LearnArticleList"
+    }
+  ],
+  "componentsTree": [
+    {
+      "componentName": "Page",
+      "id": "node_dockcviv8fo1",
+      "props": {
+        "ref": "outerView",
+        "style": {
+          "height": "100%"
+        }
+      },
+      "docId": "doclaqkk3b9",
+      "fileName": "/",
+      "dataSource": {
+        "list": [
+          {
+            "type": "fetch",
+            "isInit": true,
+            "options": {
+              "params": {},
+              "method": "GET",
+              "isCors": true,
+              "timeout": 5000,
+              "headers": {},
+              "uri": "mock/info.json"
+            },
+            "id": "info",
+            "shouldFetch": {
+              "type": "JSFunction",
+              "value": "function() { \n  console.log('should fetch.....');\n  return true; \n}"
+            }
+          }
+        ]
+      },
+      "state": {
+        "text": {
+          "type": "JSExpression",
+          "value": "\"outer\""
+        },
+        "isShowDialog": {
+          "type": "JSExpression",
+          "value": "false"
+        }
+      },
+      "css": "body {\n  font-size: 12px;\n}\n\n.button {\n  width: 100px;\n  color: #ff00ff\n}",
+      "lifeCycles": {
+        "componentDidMount": {
+          "type": "JSFunction",
+          "value": "function componentDidMount() {\n  console.log('did mount');\n}"
+        },
+        "componentWillUnmount": {
+          "type": "JSFunction",
+          "value": "function componentWillUnmount() {\n  console.log('will unmount');\n}"
+        }
+      },
+      "methods": {
+        "testFunc": {
+          "type": "JSFunction",
+          "value": "function testFunc() {\n  console.log('test func');\n}"
+        },
+        "onClick": {
+          "type": "JSFunction",
+          "value": "function onClick() {\n  this.setState({\n  isShowDialog: true\n  });\n}"
+        },
+        "closeDialog": {
+          "type": "JSFunction",
+          "value": "function closeDialog() {\n  this.setState({\n  isShowDialog: false\n  });\n}"
+        },
+        "getHelloWorldText": {
+          "type": "JSFunction",
+          "value": "function getHelloWorldText() {\n  return this.i18n('i18n-jwg27yo4');\n}"
+        },
+        "getHelloWorldText2": {
+          "type": "JSFunction",
+          "value": "function getHelloWorldText2() {\n  return this.i18n('i18n-jwg27yo3', {\n  name: '絮黎'\n  });\n}"
+        },
+        "onTestConstantsButtonClicked": {
+          "type": "JSFunction",
+          "value": "function onTestConstantsButtonClicked() {\n  console.log('constants.ConstantA:', this.constants.ConstantA);\n  console.log('constants.ConstantB:', this.constants.ConstantB);\n}"
+        },
+        "onTestUtilsButtonClicked": {
+          "type": "JSFunction",
+          "value": "function onTestUtilsButtonClicked() {\n  this.utils.demoUtil('param1', 'param2');\n}"
+        }
+      },
+      "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    });\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    });\n  }\n  getHelloWorldText() {\n    return this.i18n('i18n-jwg27yo4');\n  }\n  getHelloWorldText2() {\n    return this.i18n('i18n-jwg27yo3', {\n      name: '絮黎',\n    });\n  }\n  onTestConstantsButtonClicked() {\n    console.log('constants.ConstantA:', this.constants.ConstantA);\n    console.log('constants.ConstantB:', this.constants.ConstantB);\n\t}\n\tonTestUtilsButtonClicked(){\n    this.utils.demoUtil('param1', 'param2');\n\t}\n}",
+      "hidden": false,
+      "title": "",
+      "isLocked": false,
+      "condition": true,
+      "conditionGroup": "",
+      "children": [
+        {
+          "componentName": "ChartCard",
+          "id": "node_oclhigmpll4m",
+          "props": {
+            "data": [
+              {
+                "title": "Bitcoin (BTC) Price",
+                "describe": "The current price of Bitcoin (BTC) is $0$, which is also $1$ in the last 24 hours,  and $2$ in the past 7 days.  For more information, see <a href=\"/trade/BTC_USDT\">Bitcoin price</a> now.",
+                "href": "/trade/BTC_USDT",
+                "buttonName": "Trade BTC/USDT",
+                "options": {
+                  "tooltip": {
+                    "trigger": "none"
+                  },
+                  "xAxis": [
+                    {
+                      "data": [
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-08",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09",
+                        "05-09"
+                      ],
+                      "axisLabel": {
+                        "show": true,
+                        "interval": "auto"
+                      }
+                    }
+                  ],
+                  "yAxis": [
+                    {
+                      "type": "value",
+                      "min": "25975.38",
+                      "max": "29701.77",
+                      "splitNumber": 8
+                    }
+                  ],
+                  "grid": {
+                    "top": "4%",
+                    "left": "1%",
+                    "right": 0,
+                    "bottom": 0,
+                    "containLabel": true,
+                    "show": "true",
+                    "borderWidth": "0"
+                  },
+                  "series": [
+                    {
+                      "type": "line",
+                      "showSymbol": false,
+                      "data": [
+                        28219.3,
+                        28287.4,
+                        28201.5,
+                        28130,
+                        28262.7,
+                        28174.9,
+                        27982.9,
+                        27717.5,
+                        27916.5,
+                        27939.1,
+                        27933.8,
+                        27769,
+                        27852.4,
+                        27968.1,
+                        27888.7,
+                        27865.6,
+                        27525.5,
+                        27475.2,
+                        27342.5,
+                        27536.9,
+                        27542.5,
+                        27654.2,
+                        27666.7,
+                        27576.3,
+                        27699.7,
+                        27641,
+                        27624.5,
+                        27606.6,
+                        27544.8,
+                        27473.8
+                      ],
+                      "itemStyle": {
+                        "normal": {
+                          "color": "#F23D3D",
+                          "lineStyle": {
+                            "color": "#F23D3D"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FAQS",
+          "id": "node_oclhigmpll9n",
+          "props": {
+            "title": "faq title",
+            "FaqList": [
+              {
+                "title": "Is GBTC a good investment, especially when it is trading at a discount to NAV?",
+                "contentList": [
+                  "GBTC shares do allow investors to have exposure to Bitcoin while bypassing certain challenges such as storage, security and insurance, as well as legal compliance in the case of US investors. However, steep discount to NAV also meant that GBTC shareholders are likely to be in the state of panic or fear. With recent attacks towards the Grayscale management, such added variable to the already volatile Bitcoin price movement may increase the risk for new investors to Bitcoin and cryptocurrencies.",
+                  "other GBTC shares do allow investors to have exposure to Bitcoin while bypassing certain challenges such as storage, security and insurance, as well as legal compliance in the case of US investors. However, steep discount to NAV also meant that GBTC shareholders are likely to be in the state of panic or fear. With recent attacks towards the Grayscale management, such added variable to the already volatile Bitcoin price movement may increase the risk for new investors to Bitcoin and cryptocurrencies."
+                ],
+                "isShow": true
+              },
+              {
+                "title": "How to choose between GBTC and spot Bitcoin?",
+                "contentList": [
+                  "As all GBTC does is holding Bitcoin via trust on behalf of the investors, GBTC can actually be considered a <a href=\"/learn/articles/how-to-choose-derivatives-that-suit-you/26\">derivative</a> of Bitcoin. In saying so, the value of GBTC shares is derived from the NAV of the Bitcoins held, and comes without any intrinsic value of its own. GBTC shares are therefore vulnerable to market sentiment and risks, and is very much prone to supply and demand factors on top of spot Bitcoin price. This can pose more difficulties to investors as far as share valuation is concerned."
+                ],
+                "isShow": false
+              },
+              {
+                "title": "How to buy Bitcoin if it is decided that spot Bitcoin would be more appropriate?",
+                "contentList": [
+                  "You can buy Bitcoin by trading on the spot market via Gate.io, all you have to do is follow the steps on <a href=\"/how-to-buy/bitcoin-btc\">how to buy BTC</a> once you have funded your account."
+                ],
+                "isShow": false
+              },
+              {
+                "title": "What is the price prediction of Bitcoin (BTC) in the future?",
+                "contentList": [
+                  "Investors tend to rely on <a href=\"learn/articles/what-is-fundamental-wnalysis/27\">fundamental analysis</a> and <a href=\"/learn/articles/what-is-technical-analysis/25\">technical analysis</a> in trying to predict the future price of Bitcoin. On this point, the <a href=\"/price-prediction/bitcoin-btc\">BTC price prediction</a> may be helpful in your decision making process before making any investment decisions."
+                ],
+                "isShow": false
+              }
+            ],
+            "isDark": false,
+            "id": ""
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "LearnArticleList",
+          "id": "node_oclhigmpllg4",
+          "props": {
+            "title": "GBTC and Bitcoin Related Articles",
+            "learnArticleList": [
+              {
+                "Images": "https://s3.ap-northeast-1.amazonaws.com/gimg.gateimg.com/learn/5311f319ec00017f591e5356feac8513efd1ff29.jpg",
+                "tit": "Beginner",
+                "color": "green",
+                "subtitle": "What is Bitcoin (BTC)?",
+                "href": "/learn/articles/what-is-bitcoin/169"
+              },
+              {
+                "Images": "https://s3.ap-northeast-1.amazonaws.com/gimg.gateimg.com/learn/535631b61cb7269bb43a682e8e564a6423d9b6a5.jpg",
+                "tit": "Beginner",
+                "color": "green",
+                "subtitle": "What is a Bitcoin ETF?",
+                "href": "/learn/articles/what-is-a-bitcoin-etf/218"
+              },
+              {
+                "Images": "https://s3.ap-northeast-1.amazonaws.com/gimg.gateimg.com/learn/73f83c02f95247e84a1e5e086046cf08eee538bc.jpg",
+                "tit": "Beginner",
+                "color": "green",
+                "subtitle": "What is Spot Trading?",
+                "href": "/learn/articles/what-is-spot-trading/93"
+              }
+            ]
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FDPage",
+          "id": "node_oclfjpfqjy5",
+          "props": {
+            "contentProps": {
+              "style": {
+                "background": "rgba(255,255,255,0)"
+              }
+            },
+            "ref": "fdpage-bb43fbb0"
+          },
+          "title": "页面",
+          "hidden": false,
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
+            {
+              "componentName": "FDSection",
+              "id": "node_oclfjpfqjy6",
+              "props": {
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)",
+                  "minHeight": ""
+                }
+              },
+              "title": "区域",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "i18n": {
+    "zh-CN": {
+      "i18n-jwg27yo4": "你好 ",
+      "i18n-jwg27yo3": "{name} 博士"
+    },
+    "en-US": {
+      "i18n-jwg27yo4": "Hello ",
+      "i18n-jwg27yo3": "Doctor {name}"
+    }
+  }
+}
